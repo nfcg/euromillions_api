@@ -1,6 +1,6 @@
 # EuroMillions API
 
-### A Euro Millions Lottery Results API in php using a sqlite database.
+### A Euro Millions Lottery Results API
 
 #### Web Server Rewrite Rules.
 
