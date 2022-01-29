@@ -136,9 +136,9 @@ if ($f == "xml") {
     header("Content-type: text/plain");
     foreach ($result as $row) {
         if ($_REQUEST["v"] == "0") {
-            echo $row["date"] . " = " . $row["ball_1"] . " - " . $row["ball_2"] . " - " . $row["ball_3"] . " - " . $row["ball_4"] . " - " . $row["ball_5"] . " + " . $row["star_1"] . " - " . $row["star_2"] . "\n";
-        } else {
             echo $row["date"] . " = " . $row["balls"] . " + " . $row["stars"] . "\n";
+        } else {
+            echo $row["date"] . " = " . $row["ball_1"] . " - " . $row["ball_2"] . " - " . $row["ball_3"] . " - " . $row["ball_4"] . " - " . $row["ball_5"] . " + " . $row["star_1"] . " - " . $row["star_2"] . "\n";
         }
     }
 }
