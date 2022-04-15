@@ -9,6 +9,10 @@ Apache.
 RewriteRule ^api-euromillions-xml$ /euromillions.php?format=xml
 RewriteRule ^api-euromillions-json$ /euromillions.php?format=json
 RewriteRule ^api-euromillions$ /euromillions.php?format=txt
+
+<Directory /Your-API-Folder>
+   Header set Access-Control-Allow-Origin "*"
+</Directory>
 ```
 
 Nginx.
@@ -16,8 +20,11 @@ Nginx.
 rewrite ^/api-euromillions-xml$ /euromillions.php?format=xml;
 rewrite ^/api-euromillions-json$ /euromillions.php?format=json;
 rewrite ^/api-euromillions$ /euromillions.php?format=txt;
-```
 
+location /Your-API-Folder) {		
+   add_header 'Access-Control-Allow-Origin' '*';
+}
+```
 -----
 
 
